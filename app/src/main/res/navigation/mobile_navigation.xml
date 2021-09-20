@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_search">
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.okellosoftwarez.zurutest.ui.search.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/navigation_host"
+        android:name="com.okellosoftwarez.zurutest.ui.host.HostFragment"
+        android:label="@string/host"
+        tools:layout="@layout/fragment_host" />
+
+    <fragment
+        android:id="@+id/navigation_booking"
+        android:name="com.okellosoftwarez.zurutest.ui.booking.BookingFragment"
+        android:label="@string/booking"
+        tools:layout="@layout/fragment_booking" />
+
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.okellosoftwarez.zurutest.ui.message.MessageFragment"
+        android:label="@string/message"
+        tools:layout="@layout/fragment_message" />
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.okellosoftwarez.zurutest.ui.account.AccountFragment"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_account" />
+</navigation>

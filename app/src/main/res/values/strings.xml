@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Zuru Test</string>
+    <string name="search">Search</string>
+    <string name="host">Host</string>
+    <string name="booking">Booking</string>
+    <string name="message">Message</string>
+    <string name="account">Account</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

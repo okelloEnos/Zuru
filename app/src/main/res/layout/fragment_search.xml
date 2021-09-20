@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:backgroundTint="#ededed"
+    android:layout_height="match_parent"
+    tools:context=".ui.search.SearchFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:contentScrim="#5BA2DF"
+            app:title="Zuru">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/photo" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="center"
+        android:text="Way better than a rental car"
+        />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:backgroundTint="#84039A"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom|end|right"
+        android:layout_marginEnd="32dp"
+        android:text="Search cars by location"
+        android:textAllCaps="false"
+        app:tint="@android:color/white"
+        android:drawableTint="@color/white"
+        app:iconTint="@color/white"
+        app:icon="@drawable/ic_baseline_search_24"/>
+
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       app:layout_behavior="@string/appbar_scrolling_view_behavior"
+       android:layout_height="match_parent">
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:backgroundTint="#eded"
+           android:layout_height="wrap_content"
+           >
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recyclerViewIntro"
+               android:layout_width="match_parent"
+               android:layout_height="150dp"
+               android:layout_marginTop="30dp"
+               android:layout_marginStart="10dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               android:background="#F5F8FD"
+               android:orientation="horizontal"
+               android:padding="5dp"
+               app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+               app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:id="@+id/recent"
+               android:layout_marginStart="15dp"
+               android:layout_marginLeft="15dp"
+               android:textColor="@color/black"
+               android:textSize="16sp"
+               android:layout_marginTop="30dp"
+               android:layout_marginBottom="10dp"
+               android:layout_height="wrap_content"
+               android:text="Recently Added"
+               app:layout_constraintTop_toBottomOf="@id/recyclerViewIntro"
+               app:layout_constraintStart_toStartOf="parent"/>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recyclerViewVehicle"
+               android:layout_width="match_parent"
+               android:layout_marginStart="15dp"
+               android:layout_marginLeft="15dp"
+               android:layout_marginTop="10dp"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/recent"
+               android:layout_height="250dp"
+               android:background="#F5F8FD"
+               android:orientation="vertical"
+               android:padding="5dp"
+               app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+               app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+   </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extended_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:backgroundTint="#5BA2DF"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="70dp"
+        android:layout_gravity="bottom|right"
+        android:text=" Price filter"
+        app:iconTint="@color/white"
+        app:tint="@android:color/white"
+        app:icon="@drawable/money"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
